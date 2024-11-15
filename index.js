@@ -22,9 +22,7 @@ function main() {
       button.setAttribute("data-id", index);
       root.appendChild(button);
     });
-   }
-  
-
+  }
 
   function house(data, root) {
     root.innerHTML = "";
@@ -103,7 +101,7 @@ function main() {
       let newData = { people: [] };
       data.forEach(({ people }) => {
         people.forEach(({ name }, index) => {
-          if (name.toLocaleLowerCase().includes(value))
+          if (name.toLocaleLowerCase().includes(value.toLocaleLowerCase()))
             newData.people.push(people[index]);
         });
       });
